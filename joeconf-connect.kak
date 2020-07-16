@@ -4,4 +4,14 @@ provide-module joeconf-connect %[
       SHELL=/run/current-system/sw/bin/fish
       export __NIX_DARWIN_SET_ENVIRONMENT_DONE=1
     }
+
+		require-module connect
+
+		define-command gitui -docstring 'Open gitui' %{
+  		connect-terminal gitui
+		}
+
+		define-command darwin-rebuild -docstring 'Call nix-config rebuild function' %{
+  		connect-terminal fish -c "direnv exec (pwd) rebuild && exit"
+		}
 ]
