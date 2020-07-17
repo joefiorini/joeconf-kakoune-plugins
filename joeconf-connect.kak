@@ -8,7 +8,9 @@ provide-module joeconf-connect %[
 		require-module connect
 
 		define-command gitui -docstring 'Open gitui' %{
+  		terminal-set global joeconf-kitty kitty-overlay kitty-focus
   		connect-terminal gitui
+  		terminal-set global joeconf-kitty kitty-split kitty-focus
 		}
 
 		define-command darwin-rebuild -docstring 'Call nix-config rebuild function' %{

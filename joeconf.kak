@@ -5,4 +5,7 @@ provide-module joeconf %[
   require-module joeconf-ifelse
   require-module joeconf-lsp
   require-module joeconf-connect
+  require-module joeconf-kitty
+  require-module joeconf-split
+  require-module joeconf-usermodes
 ]
