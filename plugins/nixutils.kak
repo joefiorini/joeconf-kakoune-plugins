@@ -3,7 +3,7 @@ provide-module joeconf-nixutils %[
     add-highlighter -override shared/nix/code/ regex "([a-zA-Z_][a-zA-Z0-9-_.]*)\s*([=])" 1:variable
   }
 
-  define-command -params 1.. nix-prefetch-github %{
+  define-command -params .. nix-prefetch-github %{
     prompt owner: %{
       set-register o %val{text}
       prompt repo: %{
@@ -13,8 +13,8 @@ provide-module joeconf-nixutils %[
 
           execute-keys "!nix-prefetch-github %reg{o} %reg{r}"
 
-          if %[ -n "''${kak_reg_v}" ] %{
-           execute-keys "--rev %reg{v}"
+          if %[ -n "${kak_reg_v}" ] %{
+           execute-keys " --rev %reg{v}"
           }
 
           execute-keys " %arg{@} --nix | tail -6<ret>"

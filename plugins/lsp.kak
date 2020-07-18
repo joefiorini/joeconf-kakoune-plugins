@@ -7,7 +7,7 @@ provide-module joeconf-lsp %[
     set-option global lsp_server_configuration pyls.plugins.pyls_isort.enabled=true
   }
 
-  hook global WinSetOption filetype=(c|cpp|rust|python|javascript|typescript|reason|ocaml) %{
+  hook global WinSetOption filetype=(c|cpp|rust|python|javascript|typescript|reason|ocaml|php) %{
       eval %sh{kak-lsp --kakoune -s $kak_session}
       lsp-enable
 

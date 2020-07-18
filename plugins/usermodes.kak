@@ -46,7 +46,7 @@ provide-module joeconf-usermodes %[
 	map global user-terminal t ': kitty-terminal-tab<ret>' -docstring "Tab"
 
 	declare-user-mode refactoring 
-	map global user r ': enter-user-mode refactoring ret>' -docstring "Refactoring"
+	map global user r ': enter-user-mode refactoring<ret>' -docstring "Refactoring"
 	map global refactoring c ': lsp-code-actions<ret>' -docstring "Code Actions"
 	map global refactoring r ': lsp-highlight-references<ret>' -docstring "Highlight references"
 	map global refactoring d ': lsp-diagnostics<ret>' -docstring "Open diagnostics"
@@ -54,14 +54,15 @@ provide-module joeconf-usermodes %[
 
 	declare-user-mode lsp-navigation
 	map global refactoring g ': enter-user-mode lsp-navigation<ret>' -docstring "Code Navigation"
-	map global lsp-navigation d ': lsp-definiton<ret>' -docstring "Go to definition"
+	map global lsp-navigation d ': lsp-definition<ret>' -docstring "Go to definition"
 	map global lsp-navigation r ': lsp-references<ret>' -docstring "List references"
 	map global lsp-navigation s ': lsp-document-symbol<ret>' -docstring "Show symbols"
 
 	declare-user-mode clipboard
 
 	map global user y ': enter-user-mode clipboard<ret>' -docstring "System Clipboard"
-	map global clipboard c '%<a-|>pbcopy<ret>' -docstring "Copy"
-	map global clipboard x '%|pbcopy<ret>' -docstring "Cut"
+	map global clipboard f '%<a-|>pbcopy<ret>' -docstring "Copy file"
+	map global clipboard c '<a-|>pbcopy<ret>' -docstring "Copy"
+	map global clipboard x '|pbcopy<ret>' -docstring "Cut"
 	map global clipboard v '!pbpaste<ret>' -docstring "Paste"
 ]
