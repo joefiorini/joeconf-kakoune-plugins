@@ -102,8 +102,8 @@ A collection of useful commands operating on the path of the current buffer's fi
 Mnemonic keyboard mappings that work extremely well with Kakoune's self-documentation; similar to Spacemacs, SpaceVim, vim-which-key, etc.
 
 
-[1]: https://kakoune.org/
-[2]: https://github.com/andreyorst/plug.kak
-[3]: http://nixos.org/
-[4]: https://github.com/nmattia/niv
-[5]: https://github.com/andreyorst/dotfiles/blob/187ebb84f9542b76a4f3c3e08f9533cd8187faa1/.config/kak/commands.kak#L254-L278
+[1]: https://kakoune.org/ "Kakoune Website"
+[2]: https://github.com/andreyorst/plug.kak "Plug.kak on Github"
+[3]: http://nixos.org/ "NixOS Website"
+[4]: https://github.com/nmattia/niv "Niv on Github"
+[5]: https://github.com/andreyorst/dotfiles/blob/187ebb84f9542b76a4f3c3e08f9533cd8187faa1/.config/kak/commands.kak#L254-L278 "If command on github"
